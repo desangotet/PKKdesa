@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Galeri Pembuatan</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1950&q=80') no-repeat center center fixed;
+      background-size: cover;
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      padding: 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    /* Menu Bar */
+    .menu-bar {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      padding: 1rem 2rem;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border-radius: 2rem;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 2rem;
+    }
+
+    .menu-bar a {
+      text-decoration: none;
+      color: #ffffffcc;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .menu-bar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    .menu-bar a::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0%;
+      height: 2px;
+      background: #fff;
+      transition: width 0.3s ease;
+    }
+
+    .menu-bar a:hover::after {
+      width: 50%;
+    }
+
+    /* Galeri Grid */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .gallery img {
+      width: 100%;
+      max-width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.06);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.4);
+    }
+
+    @media (max-width: 480px) {
+      .menu-bar a {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Menu Navigasi -->
+    <div class="menu-bar">
+      <a href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a href="galeri.html"><i class="fas fa-images"></i> Galeri Hasil</a>
+      <a href="pembuatan.html"><i class="fas fa-tools"></i> Galeri Pembuatan</a>
+    </div>
+
+    <!-- Galeri Gambar -->
+    <div class="gallery">
+      <img src="gambar/a (1).jpeg" alt="Pembuatan 1" />
+      <img src="gambar/a (2).jpeg" alt="Pembuatan 2" />
+      <img src="gambar/a (3).jpeg" alt="Pembuatan 3" />
+      <img src="gambar/a (4).jpeg" alt="Pembuatan 4" />
+      <img src="gambar/a (5).jpeg" alt="Pembuatan 5" />
+      <img src="gambar/a (6).jpeg" alt="Pembuatan 6" />
+      <img src="gambar/a (7).jpeg" alt="Pembuatan 7" />
+      <img src="gambar/a (8).jpeg" alt="Pembuatan 8" />
+      <img src="gambar/b (1).jpeg" alt="Pembuatan 9" />
+      <img src="gambar/b (2).jpeg" alt="Pembuatan 10" />
+    </div>
+  </div>
+</body>
+</html>
